@@ -1,0 +1,28 @@
+<!-- Copyright (c) Microsoft Corporation.
+     Licensed under the MIT License. -->
+
+<!-- <SharePointSnippet> -->
+{% extends "tutorial/layout.html" %}
+{% block content %}
+<h1>SharePoint</h1>
+<p>my followed sites</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">webUrl</th>
+      <th scope="col">displayName</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% if sites %}
+    {% for site in sites %}
+    <tr>
+      <td>{{ site.webUrl }}</td>
+      <td>{{ site.displayName }}</td>
+    </tr>
+    {% endfor %}
+    {% endif %}
+  </tbody>
+</table>
+{% endblock %}
+<!-- </SharePointSnippet> -->
